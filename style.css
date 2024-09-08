@@ -159,52 +159,6 @@ button:active {
     transform: translateY(0); /* Reset lift effect */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Reset shadow on click */
 }
-/* Initially, the CV form is visible, and the CV template is hidden */
-#cv-form {
-    display: block;
-}
-
-#cv-template {
-    display: none;
-}
-
-/* Profile image */
-.myimg {
-    border-radius: 50%;
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border: 5px solid #007bff; /* Add a border for a pop effect */
-    transition: transform 0.3s ease-in-out;
-}
-
-.myimg:hover {
-    transform: scale(1.05); /* Slight zoom on hover */
-}
-
-/* Background styling */
-.background {
-    background: linear-gradient(135deg, #f0f8ff, #e0f7fa, #b9fbc0);
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-size: 300% 300%; /* For animation effect */
-    animation: gradientAnimation 10s ease infinite; /* Animate gradient */
-}
-
-/* Gradient animation */
-@keyframes gradientAnimation {
-    0% { background-position: 0% 0%; }
-    50% { background-position: 100% 100%; }
-    100% { background-position: 0% 0%; }
-}
-
-/* Typography */
-h1, h2, h3, p {
-    font-family: 'Poppins', sans-serif;
-    color: #333;
-    font-weight: bold; /* Make all text bold */
-}
 
 /* Container for resume generator page */
 .container {
@@ -297,60 +251,15 @@ button:active {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Reset shadow on click */
 }
 
-/* Add new field button styling */
-#weAddButton, #aqAddButton, #skillsAddButton {
-    margin-top: 10px;
-}
-
-#weAddButton button, #aqAddButton button, #skillsAddButton button {
-    padding: 8px 16px;
-    font-size: 14px;
-}
-
-/* Print CV button styles */
-#print-cv-button {
-    padding: 12px 24px;
-    background-color: #ff5722; /* Bold color for prominence */
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: bold; /* Make button text bold */
-    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
-}
-
-/* Hover effect */
-#print-cv-button:hover {
-    background-color: #e64a19; /* Darker shade for hover effect */
-    transform: translateY(-2px); /* Slight lift effect */
-}
-
-/* Active effect */
-#print-cv-button:active {
-    background-color: #d84315; /* Even darker shade for active state */
-    transform: translateY(0); /* Reset lift effect */
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Reduce shadow on click */
-}
-
-/* Responsive design adjustments */
 @media (max-width: 768px) {
     .col-md-6 {
-        padding: 10px;
-        border-right: none;
-    }
-
-    .col-md-6:first-child {
+        width: 100%;
         padding-right: 0;
+        padding-left: 0;
+        border-right: none;
     }
 
     .col-md-6:last-child {
         padding-left: 0;
-    }
-
-    button {
-        padding: 8px 16px;
-        font-size: 14px;
     }
 }
